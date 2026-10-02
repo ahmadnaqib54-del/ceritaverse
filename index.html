@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CeritaVerse — Jose: Dari Portugal ke Melaka 1511</title>
+<style>
+:root{--bg:#08090d;--panel:#11131a;--panel2:#171923;--text:#f5f5f7;--muted:#9a9dab;--accent:#e50914;--line:#262936;--paper:#f3efe6;--ink:#24211c;--gold:#d7ad68}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+button{font:inherit}.nav{position:fixed;top:0;z-index:20;width:100%;padding:18px 5%;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(180deg,rgba(0,0,0,.9),transparent);transition:.25s}.nav.scrolled{background:rgba(8,9,13,.95);backdrop-filter:blur(12px)}
+.logo{font-size:24px;font-weight:900;letter-spacing:-1px}.logo span{color:var(--accent)}.navlinks{display:flex;gap:22px;color:#ddd;font-size:14px}.navlinks a{color:inherit;text-decoration:none}.actions{display:flex;gap:9px}.btn{border:0;border-radius:7px;padding:10px 17px;font-weight:700;cursor:pointer}.login{background:transparent;color:#fff;border:1px solid #555}.subscribe{background:var(--accent);color:#fff}
+.hero{min-height:690px;padding:150px 5% 80px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 75% 30%,rgba(181,105,35,.35),transparent 27%),linear-gradient(90deg,#08090d 0%,rgba(8,9,13,.78) 45%,rgba(8,9,13,.12) 100%),linear-gradient(180deg,#1c1510,#08090d)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#08090d 0%,transparent 38%);pointer-events:none}
+.heroArt{position:absolute;right:4%;bottom:-5%;width:min(50vw,650px);height:90%;opacity:.72;background:radial-gradient(ellipse at center,rgba(194,137,65,.30),transparent 48%),linear-gradient(145deg,transparent 45%,rgba(255,255,255,.08) 46%,transparent 48%);transform:rotate(-7deg);filter:blur(.2px)}
+.heroContent{max-width:720px;position:relative;z-index:2}.eyebrow{color:#ddd;text-transform:uppercase;letter-spacing:3px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(48px,7vw,88px);line-height:.9;margin:14px 0 20px;letter-spacing:-4px}.hero p{font-size:18px;line-height:1.6;color:#d2d3d7;max-width:620px}.meta{display:flex;gap:10px;align-items:center;color:#bbb;margin:18px 0;flex-wrap:wrap}.tag{border:1px solid #5d5f68;border-radius:4px;padding:3px 7px;font-size:12px}.tag.gold{border-color:#9b7947;color:#e9c98c}.heroButtons{display:flex;gap:10px;margin-top:26px}.primary{background:#fff;color:#08090d}.secondary{background:rgba(255,255,255,.13);color:#fff;border:1px solid rgba(255,255,255,.2)}
+.section{padding:28px 5% 10px}.sectionHead{display:flex;align-items:end;justify-content:space-between;margin-bottom:15px}.section h2{font-size:22px;margin:0}.see{font-size:13px;color:#aaa}.row{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.card{background:var(--panel);border-radius:9px;overflow:hidden;position:relative;cursor:pointer;transition:.25s}.card:hover{transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,.35)}.cover{height:245px;background:radial-gradient(circle at 70% 28%,rgba(208,153,79,.55),transparent 23%),linear-gradient(145deg,#22150e 0%,#4b2a16 38%,#11131a 80%);position:relative;display:flex;align-items:flex-end;padding:18px}.cover:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.82),transparent 65%)}.coverTitle{position:relative;z-index:2;font-size:25px;font-weight:900;line-height:.95;max-width:90%;letter-spacing:-1px}.cardBody{padding:12px}.card h3{font-size:15px;margin:0 0 5px}.sub{font-size:12px;color:var(--muted)}.pill{position:absolute;top:10px;left:10px;z-index:2;background:rgba(0,0,0,.72);padding:5px 7px;border-radius:4px;font-size:10px;font-weight:800}.pill.free{color:#9ee6ae}
+.categories{display:flex;gap:10px;overflow:auto;padding-bottom:8px}.cat{min-width:145px;height:76px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg,#191b25,#0e1016);display:flex;align-items:center;padding:0 17px;font-weight:800}
+.info{padding:55px 5%;display:grid;grid-template-columns:1fr 1fr;gap:30px}.infoBox{background:var(--panel);border:1px solid var(--line);padding:25px;border-radius:12px}.infoBox h3{margin-top:0}.infoBox p{color:#aaa;line-height:1.7;font-size:14px}footer{border-top:1px solid var(--line);padding:30px 5%;color:#777;font-size:12px;margin-top:40px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.modal.open{display:flex}.seriesBox{width:min(1000px,100%);max-height:90vh;overflow:auto;background:#14161e;border:1px solid #30323e;border-radius:14px;padding:28px;box-shadow:0 30px 80px #000}.seriesHead{display:flex;justify-content:space-between;gap:20px;align-items:flex-start}.seriesHead h2{font-size:32px;margin:0 0 8px}.seriesHead p{color:#aaa;line-height:1.6;max-width:700px}.seasonTabs{display:flex;gap:8px;margin:20px 0}.seasonTab{background:#252833;color:#ccc;border:1px solid #343744;border-radius:7px;padding:10px 15px;cursor:pointer}.seasonTab.active{background:#fff;color:#111}.episodeGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.episode{background:#0e1016;border:1px solid #282b36;border-radius:9px;padding:15px;display:flex;justify-content:space-between;gap:15px;align-items:center;cursor:pointer}.episode:hover{border-color:#555}.episode h4{margin:0 0 5px;font-size:15px}.episode small{color:#888}.episode .epBadge{font-size:10px;font-weight:800;padding:5px 7px;border-radius:4px;background:#252833;color:#bbb;white-space:nowrap}.episode .epBadge.free{color:#9ee6ae}.closeBtn{background:#252833;color:#fff;border:0}
+.reader{display:none;position:fixed;inset:0;background:var(--bg);color:var(--text);z-index:60;overflow:auto}.reader.open{display:block}.readerTop{position:sticky;top:0;background:rgba(8,9,13,.94);color:var(--text);backdrop-filter:blur(10px);padding:16px 6%;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line);z-index:3}.readerTop button{background:#252833;color:#fff}.readerArticle{max-width:760px;margin:55px auto;padding:0 22px 100px;font-family:Georgia,serif;color:var(--text)}.readerArticle h1{font-size:50px;line-height:1.05;margin:10px 0;color:var(--text)}.chapterMeta{font-family:system-ui;color:var(--muted);font-size:14px}.readerArticle p{font-size:20px;line-height:1.9;margin:0 0 24px;color:#e5e5e8}.readerNav{display:flex;justify-content:space-between;gap:12px;margin:50px 0 20px;font-family:system-ui}.readerNav button{background:#171923;color:#fff;border:0;border-radius:7px;padding:12px 16px;cursor:pointer}.readerNav button:disabled{opacity:.35;cursor:not-allowed}
+@media(max-width:900px){.row{grid-template-columns:repeat(3,1fr)}.info{grid-template-columns:1fr}.navlinks{display:none}.hero{min-height:620px}.heroArt{right:-20%;opacity:.35}.episodeGrid{grid-template-columns:1fr}}
+@media(max-width:600px){.row{grid-template-columns:repeat(2,1fr);gap:10px}.cover{height:220px}.hero{padding-top:130px}.hero h1{font-size:52px}.hero p{font-size:15px}.section{padding-left:4%;padding-right:4%}.nav{padding-left:4%;padding-right:4%}.logo{font-size:21px}.actions .login{display:none}.readerArticle h1{font-size:38px}.readerArticle p{font-size:18px}.readerTop{padding:12px 4%}.seriesBox{padding:20px}.seriesHead h2{font-size:25px}}
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="logo">CERITA<span>Verse</span></div>
+  <div class="navlinks"><a href="#home">Utama</a><a href="#trending">Trending</a><a href="#categories">Kategori</a><a href="#new">Cerita Baharu</a></div>
+  <div class="actions"><button class="btn login" onclick="alert('Log masuk akan disambungkan kemudian.')">Log Masuk</button><button class="btn subscribe" onclick="alert('Sistem langganan akan disambungkan kemudian.')">Langgan</button></div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="heroArt"></div>
+  <div class="heroContent">
+    <div class="eyebrow">Cerita Sejarah · CeritaVerse</div>
+    <h1>JOSE:<br>DARI PORTUGAL<br>KE MELAKA 1511</h1>
+    <div class="meta"><span class="tag gold">2 SEASONS</span><span class="tag">17 EPISODES</span><span>Sejarah</span><span>Bahasa Melayu</span></div>
+    <p>Ikuti perjalanan Jose dari Portugal menuju Melaka pada 1511 — dari pelayaran, pertempuran dan penaklukan kota, hingga kehidupan selepas Melaka jatuh.</p>
+    <div class="heroButtons"><button class="btn primary" onclick="openSeries()">▶ Pilih Episod</button><button class="btn secondary" onclick="openSeries()">ⓘ Lihat Semua Episod</button></div>
+  </div>
+</header>
+
+<section class="section" id="trending">
+  <div class="sectionHead"><h2>🔥 Cerita Trending</h2><span class="see">CeritaVerse</span></div>
+  <div class="row" id="trendingRow"></div>
+</section>
+
+<section class="section" id="categories">
+  <div class="sectionHead"><h2>Jelajah Kategori</h2></div>
+  <div class="categories">
+    <div class="cat">🏛️ Sejarah</div><div class="cat">🐉 Fantasi</div><div class="cat">🕵️ Misteri</div><div class="cat">🌎 Kisah Benar</div>
+    <div class="cat">👻 Seram</div><div class="cat">❤️ Romantik</div><div class="cat">🚀 Sains Fiksyen</div>
+  </div>
+</section>
+
+<section class="section" id="new">
+  <div class="sectionHead"><h2>✨ Cerita Baharu</h2><span class="see">Dikemas kini</span></div>
+  <div class="row" id="newRow"></div>
+</section>
+
+<section class="info">
+  <div class="infoBox"><h3>📚 2 Season · 17 Episod</h3><p><b>Season 1:</b> 10 episod. <b>Season 2:</b> 7 episod. Setiap episod disimpan sebagai fail JSON berasingan supaya mudah ditambah, disunting dan disusun kemudian.</p></div>
+  <div class="infoBox"><h3>🔓 Model bacaan</h3><p>Untuk prototype ini, Episod 1–3 ditanda sebagai percuma dan episod seterusnya ditanda Premium secara visual. Sistem akaun dan pembayaran sebenar boleh disambungkan kemudian.</p></div>
+</section>
+
+<footer>CERITAVERSE · Prototype · Jose: Dari Portugal ke Melaka 1511</footer>
+
+<div class="modal" id="seriesModal">
+  <div class="seriesBox">
+    <div class="seriesHead">
+      <div>
+        <h2>Jose: Dari Portugal ke Melaka 1511</h2>
+        <p>2 Season · 17 Episod. Pilih season dan episod untuk mula membaca.</p>
+      </div>
+      <button class="btn closeBtn" onclick="closeSeries()">✕ Tutup</button>
+    </div>
+    <div class="seasonTabs" id="seasonTabs"></div>
+    <div class="episodeGrid" id="episodeGrid"></div>
+  </div>
+</div>
+
+<div class="reader" id="reader">
+  <div class="readerTop">
+    <strong>CERITAVERSE · PEMBACA</strong>
+    <button class="btn" onclick="closeReader()">✕ Tutup</button>
+  </div>
+  <article class="readerArticle" id="readerArticle"></article>
+</div>
+
+<script>
+let joseManifest=null;
+let currentSeason=1;
+let currentEpisodeIndex=0;
+let currentEpisodes=[];
+
+async function loadJose(){
+  const response=await fetch('stories/jose-series.json');
+  joseManifest=await response.json();
+  renderStoryCards();
+}
+
+function renderStoryCards(){
+  const card=`<div class="card" onclick="openSeries()">
+    <div class="cover"><span class="pill free">2 SEASONS · 17 EPISOD</span><div class="coverTitle">JOSE:<br>DARI PORTUGAL<br>KE MELAKA 1511</div></div>
+    <div class="cardBody"><h3>Jose: Dari Portugal ke Melaka 1511</h3><div class="sub">Sejarah · Drama · 2 Seasons</div></div>
+  </div>`;
+  document.getElementById('trendingRow').innerHTML=card;
+  document.getElementById('newRow').innerHTML=card;
+}
+
+function openSeries(){
+  document.getElementById('seriesModal').classList.add('open');
+  renderSeasonTabs();
+  renderEpisodes(1);
+}
+function closeSeries(){document.getElementById('seriesModal').classList.remove('open')}
+
+function renderSeasonTabs(){
+  document.getElementById('seasonTabs').innerHTML=joseManifest.seasons.map(s=>
+    `<button class="seasonTab ${s.season===currentSeason?'active':''}" onclick="renderEpisodes(${s.season})">Season ${s.season} · ${s.episodes.length} Episod</button>`
+  ).join('');
+}
+
+function renderEpisodes(season){
+  currentSeason=season;
+  currentEpisodes=joseManifest.seasons.find(s=>s.season===season).episodes;
+  renderSeasonTabs();
+  document.getElementById('episodeGrid').innerHTML=currentEpisodes.map((e,i)=>
+    `<div class="episode" onclick="openEpisode(${i})">
+      <div><h4>Episod ${String(e.episode).padStart(2,'0')} — ${escapeHtml(e.title)}</h4><small>${season===1?'Season 1':'Season 2'}</small></div>
+      <span class="epBadge ${e.access==='free'?'free':''}">${e.access==='free'?'PERCUMA':'PREMIUM'}</span>
+    </div>`
+  ).join('');
+}
+
+async function openEpisode(index){
+  const ep=currentEpisodes[index];
+  try{
+    const response=await fetch(ep.file);
+    const data=await response.json();
+    currentEpisodeIndex=index;
+    renderReader(data);
+    closeSeries();
+  }catch(error){
+    alert('Episod gagal dimuatkan. Pastikan folder stories dimuat naik bersama index.html.');
+  }
+}
+
+function renderReader(data){
+  const content=(data.content||[]).map(item=>{
+    if(item.type==='paragraph') return `<p>${escapeHtml(item.text||'')}</p>`;
+    return '';
+  }).join('');
+  const previous=currentEpisodeIndex>0;
+  const next=currentEpisodeIndex<currentEpisodes.length-1;
+  document.getElementById('readerArticle').innerHTML=
+    `<div class="chapterMeta">JOSE: DARI PORTUGAL KE MELAKA 1511 · SEASON ${data.season} · EPISOD ${String(data.episode).padStart(2,'0')}</div>
+     <h1>${escapeHtml(data.title)}</h1>
+     ${content}
+     <div class="readerNav">
+       <button ${previous?'':'disabled'} onclick="openEpisode(${currentEpisodeIndex-1})">← Episod Sebelumnya</button>
+       <button ${next?'':'disabled'} onclick="openEpisode(${currentEpisodeIndex+1})">Episod Seterusnya →</button>
+     </div>`;
+  document.getElementById('reader').classList.add('open');
+  document.body.style.overflow='hidden';
+  document.getElementById('reader').scrollTop=0;
+}
+
+function closeReader(){
+  document.getElementById('reader').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));
+}
+
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',scrollY>40));
+loadJose();
+</script>
+</body>
+</html>
